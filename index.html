@@ -1,191 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christian Korb | Portfólio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      h1, h2, h3, h4, .font-display {
-        font-family: 'Playfair Display', serif;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
     </style>
-  </head>
-  <body id="topo" class="bg-zinc-900 text-zinc-200">
+</head>
+
+<body id="topo" class="bg-zinc-900 text-zinc-200">
 
     <!-- Header -->
     <header class="fixed w-full bg-zinc-900/80 backdrop-blur-md z-50 border-b border-zinc-700">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="font-display text-xl font-bold text-white">Christian Korb</h1>
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="font-display text-xl font-bold text-white">Christian Korb</h1>
 
-        <!-- Botão mobile -->
-        <button id="menu-btn" class="sm:hidden focus:outline-none" aria-label="Abrir menu">
-          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+            <!-- Botão mobile -->
+            <button id="menu-btn" class="sm:hidden focus:outline-none" aria-label="Abrir menu">
+                <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
 
-        <!-- Navegação -->
-        <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-6 text-sm absolute sm:static right-6 top-16 bg-zinc-900/90 sm:bg-transparent border border-zinc-700 sm:border-0 rounded-lg p-4 sm:p-0 shadow-lg sm:shadow-none transition-all duration-300 ease-in-out sm:opacity-100 sm:scale-100 z-50 backdrop-blur-md sm:backdrop-blur-none">
-          <a href="#sobre" class="hover:text-indigo-400 hover:underline">Sobre</a>
-          <a href="#habilidades" class="hover:text-indigo-400 hover:underline">Habilidades</a>
-          <a href="#projetos" class="hover:text-indigo-400 hover:underline">Projetos</a>
-          <a href="#contato" class="hover:text-indigo-400 hover:underline">Contato</a>
-        </nav>
-      </div>
+            <!-- Navegação -->
+            <nav id="menu"
+                class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-6 text-sm absolute sm:static right-6 top-16 bg-zinc-900/90 sm:bg-transparent border border-zinc-700 sm:border-0 rounded-lg p-4 sm:p-0 shadow-lg sm:shadow-none transition-all duration-300 ease-in-out sm:opacity-100 sm:scale-100 z-50 backdrop-blur-md sm:backdrop-blur-none">
+                <a href="#sobre" class="hover:text-indigo-400 hover:underline">Sobre</a>
+                <a href="#habilidades" class="hover:text-indigo-400 hover:underline">Habilidades</a>
+                <a href="#projetos" class="hover:text-indigo-400 hover:underline">Projetos</a>
+                <a href="#contato" class="hover:text-indigo-400 hover:underline">Contato</a>
+            </nav>
+        </div>
     </header>
-    
+
     <!-- Hero -->
     <section class="h-screen flex items-center justify-center text-center px-4 bg-zinc-900 pt-24">
-      <div>
-        <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">PORTFÓLIO</h2>
-        <p class="text-lg text-zinc-400">Designer e Desenvolvedor Visual</p>
-      </div>
+        <div>
+            <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">PORTFÓLIO</h2>
+            <p class="text-lg text-zinc-400">Designer e Desenvolvedor Visual</p>
+        </div>
     </section>
 
     <!-- Sobre -->
     <section id="sobre" class="py-24 px-6 max-w-5xl mx-auto">
-      <h3 class="text-3xl font-display font-bold mb-8 text-white">Um Pouco Sobre Mim</h3>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <p class="text-zinc-300 leading-relaxed">
-          Sou um apaixonado por design visual. Gosto de traduzir emoções e ideias em identidade e conexão. Amo me dedicar com foco e criatividade a soluções visuais que transformam marcas e projetos em experiências memoráveis.
-        </p>
-        <img src="minha-foto.jpg" alt="Christian Korb" class="rounded-xl shadow-lg shadow-indigo-500/10" onerror="this.onerror=null;this.src='https://placehold.co/600x600/18181b/4f46e5?text=Foto+Indisponível';" />
-      </div>
+        <h3 class="text-3xl font-display font-bold mb-8 text-white">Um Pouco Sobre Mim</h3>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <p class="text-zinc-300 leading-relaxed">
+                Sou um apaixonado por design visual. Gosto de traduzir emoções e ideias em identidade e conexão. Amo me
+                dedicar com foco e criatividade a soluções visuais que transformam marcas e projetos em experiências
+                memoráveis.
+            </p>
+            <img src="minha-foto.jpg" alt="Christian Korb" class="rounded-xl shadow-lg shadow-indigo-500/10"
+                onerror="this.onerror=null;this.src='https://placehold.co/600x600/18181b/4f46e5?text=Foto+Indisponível';" />
+        </div>
     </section>
 
     <!-- Habilidades -->
     <section id="habilidades" class="py-24 px-6 bg-zinc-800">
-      <div class="max-w-5xl mx-auto">
-        <h3 class="text-3xl font-display font-bold mb-8 text-white">Experiência & Habilidades</h3>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside text-zinc-300">
-          <li>Design gráfico</li>
-          <li>Edição de imagem</li>
-          <li>Criação de marcas</li>
-          <li>Desenvolvimento visual</li>
-          <li>Desenvolvimento Web/Apps</li>
-        </ul>
-      </div>
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-display font-bold mb-8 text-white">Experiência & Habilidades</h3>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside text-zinc-300">
+                <li>Design gráfico</li>
+                <li>Edição de imagem</li>
+                <li>Criação de marcas</li>
+                <li>Desenvolvimento visual</li>
+                <li>Desenvolvimento Web/Apps</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Projetos -->
     <section id="projetos" class="py-24 px-6 max-w-6xl mx-auto">
-      <h3 class="text-3xl font-display font-bold mb-12 text-white">Minha Arte</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Projeto 1 -->
-        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
-          <img src="logo.portfolio.png" alt="Portfolio Digital" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2 text-white">Portfólio Digital</h4>
-            <p class="text-zinc-400 mb-4">Portfólio digital com projetos visuais que equilibram estética e significado.</p>
-            <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
-          </div>
+        <h3 class="text-3xl font-display font-bold mb-12 text-white">Minha Arte</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Projeto 1 -->
+            <div
+                class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+                <img src="logo.portfolio.png" alt="Portfolio Digital" class="w-full h-64 object-cover object-center"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 text-white">Portfólio Digital</h4>
+                    <p class="text-zinc-400 mb-4">Portfólio digital com projetos visuais que equilibram estética e
+                        significado.</p>
+                    <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank"
+                        rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div
+                class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+                <img src="underline.logo.png" alt="Underline Logo" class="w-full h-64 object-cover object-center"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 text-white">Underline</h4>
+                    <p class="text-zinc-400 mb-4">Landing page e identidade visual para o site institucional da empresa
+                        Underline.</p>
+                    <a href="https://christiankcastro.github.io/underline_landing_page/" target="_blank"
+                        rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+                </div>
+            </div>
+            <!-- Projeto 3 -->
+            <div
+                class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+                <img src="torredeurza.logo.png" alt="A Torre de Urza Logo"
+                    class="w-full h-64 object-cover object-center"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 text-white">A Torre de Urza</h4>
+                    <p class="text-zinc-400 mb-4">Logo e identidade de marca para loja especializada em Magic: The
+                        Gathering.</p>
+                    <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank"
+                        rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+                </div>
+            </div>
         </div>
-        <!-- Projeto 2 -->
-        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
-          <img src="underline.logo.png" alt="Underline Logo" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2 text-white">Underline</h4>
-            <p class="text-zinc-400 mb-4">Landing page e identidade visual para o site institucional da empresa Underline.</p>
-            <a href="https://christiankcastro.github.io/underline_landing_page/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
-          </div>
-        </div>
-        <!-- Projeto 3 -->
-        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
-          <img src="torredeurza.logo.png" alt="A Torre de Urza Logo" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
-          <div class="p-6">
-            <h4 class="text-xl font-semibold mb-2 text-white">A Torre de Urza</h4>
-            <p class="text-zinc-400 mb-4">Logo e identidade de marca para loja especializada em Magic: The Gathering.</p>
-            <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Frase de impacto -->
     <section class="py-32 px-6 bg-zinc-900 text-white text-center">
-      <h2 class="text-4xl md:text-5xl font-display italic font-bold">Eu fui <span class="text-indigo-400">criado</span> para criar.</h2>
+        <h2 class="text-4xl md:text-5xl font-display italic font-bold">Eu fui <span
+                class="text-indigo-400">criado</span> para criar.</h2>
     </section>
 
     <!-- Projetos em Desenvolvimento -->
-    <section id="projetos" class="py-24 px-6 max-w-6xl mx-auto">
-       <h3 class="text-3xl font-display font-bold mb-12 text-white">Projetos em Desenvolvimento</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-    <section class="py-24 px-6 max-w-6xl mx-auto">
-          <img src="datazen.logo.png" alt="DataZen Logo" class="w-full h-full object-cover col-span-1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
-            <div class="p-6 col-span-2">
-                <h4 class="text-xl font-semibold mb-2 text-white">DataZen</h4>
-                <p class="text-zinc-400 mb-4">Logo e desenvolvimento de app para estudantes de programação usando IA.</p>
-                <a href="https://github.com/ChristianKCastro/data_tutor_ai" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+    <section id="projetos_em_desenvolvimento" class="py-24 px-6 max-w-6xl mx-auto">
+        <h3 class="text-3xl font-display font-bold mb-12 text-white">Projetos em Desenvolvimento</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Projeto 1 -->
+            <div
+                class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+                <img src="datazen.logo.png" alt="DataZen Logo"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 text-white">DataZen</h4>
+                        <p class="text-zinc-400 mb-4">Logo e desenvolvimento de app para estudantes de programação
+                            usando IA.</p>
+                        <a href="https://github.com/ChristianKCastro/data_tutor_ai" target="_blank"
+                            rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div
+                class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+                <img src="conciliador-bancario.png" alt="DataZen Logo"
+                    onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+                <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2 text-white">Conciliador Bancário</h4>
+                <p class="text-zinc-400 mb-4">Logo e desenvolvimento de aplicação em Python de análise de dados para a
+                    leitura e organização de informações financeiras no momento da conciliação bancária.</p>
+                <a href="https://github.com/ChristianKCastro/conciliador-bancario" target="_blank"
+                    rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+                </div>
+            </div>
+           
             </div>
         </div>
-       <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
-          <img src="conciliador-bancario.png" alt="DataZen Logo" class="w-full h-full object-cover col-span-1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
-            <div class="p-6 col-span-2">
-                <h4 class="text-xl font-semibold mb-2 text-white">Conciliador Bancário</h4>
-                <p class="text-zinc-400 mb-4">Logo e desenvolvimento de aplicação em Pytohn de análise de dados para a leitura e organização de informações financeiras no momento da conciliação bancária.</p>
-                <a href="https://github.com/ChristianKCastro/conciliador-bancario" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
-            </div>
-        </div>
-      </div>
     </section>
 
     <!-- Contato -->
     <footer id="contato" class="py-24 px-6 bg-zinc-800 text-zinc-200">
-      <div class="max-w-4xl mx-auto text-center space-y-10">
-        <h3 class="text-3xl font-display font-bold text-white">Trabalhe Comigo</h3>
+        <div class="max-w-4xl mx-auto text-center space-y-10">
+            <h3 class="text-3xl font-display font-bold text-white">Trabalhe Comigo</h3>
 
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6 flex-wrap">
-          <!-- Email -->
-          <a href="mailto:korb.designn@gmail.com" class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-            <span class="hover:text-indigo-400">korb.designn@gmail.com</span>
-          </a>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 flex-wrap">
+                <!-- Email -->
+                <a href="mailto:korb.designn@gmail.com"
+                    class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-zinc-400" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    <span class="hover:text-indigo-400">korb.designn@gmail.com</span>
+                </a>
 
-          <!-- Telefone -->
-          <a href="https://wa.me/554999770098?text=Olá,%20gostaria%20de%20conversar%20sobre%20seus%20serviços." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
-            <svg class="w-5 h-5 text-zinc-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48a12.08 12.08 0 0 0-17.06 0c-4.7 4.7-4.72 12.32-.06 17.06L2 22l1.5-.42a11.9 11.9 0 0 0 4.35.84h.02a12.07 12.07 0 0 0 8.51-3.53 12.08 12.08 0 0 0 0-17.06zM8.24 6.89a.64.64 0 0 1 .63-.16c.19.05 1.37.68 1.58.78.21.11.36.16.51.36.15.2.56.69.56.86s-.09.43-.17.6c-.09.17-.2.38-.29.5-.09.11-.19.23-.12.36s.44.69.94 1.11c.65.58 1.2.77 1.37.86.17.08.28.07.39-.04.11-.11.45-.52.57-.7.12-.18.24-.15.4-.09.17.06 1.11.53 1.3.63.19.1.32.16.36.24.05.08.05.45-.12.88-.17.43-1.01.94-1.39.98-.36.04-.76.06-1.21-.09a7.74 7.74 0 0 1-3.32-2.18A8.08 8.08 0 0 1 7.29 9.1c-.1-.36-.1-.66-.09-.89.02-.23.24-.34.37-.39z"/></svg>
-            <span class="hover:text-indigo-400">(49) 9 9977-0098</span>
-          </a>
+                <!-- Telefone -->
+                <a href="https://wa.me/554999770098?text=Olá,%20gostaria%20de%20conversar%20sobre%20seus%20serviços."
+                    target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
+                    <svg class="w-5 h-5 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.52 3.48a12.08 12.08 0 0 0-17.06 0c-4.7 4.7-4.72 12.32-.06 17.06L2 22l1.5-.42a11.9 11.9 0 0 0 4.35.84h.02a12.07 12.07 0 0 0 8.51-3.53 12.08 12.08 0 0 0 0-17.06zM8.24 6.89a.64.64 0 0 1 .63-.16c.19.05 1.37.68 1.58.78.21.11.36.16.51.36.15.2.56.69.56.86s-.09.43-.17.6c-.09.17-.2.38-.29.5-.09.11-.19.23-.12.36s.44.69.94 1.11c.65.58 1.2.77 1.37.86.17.08.28.07.39-.04.11-.11.45-.52.57-.7.12-.18.24-.15.4-.09.17.06 1.11.53 1.3.63.19.1.32.16.36.24.05.08.05.45-.12.88-.17.43-1.01.94-1.39.98-.36.04-.76.06-1.21-.09a7.74 7.74 0 0 1-3.32-2.18A8.08 8.08 0 0 1 7.29 9.1c-.1-.36-.1-.66-.09-.89.02-.23.24-.34.37-.39z" />
+                    </svg>
+                    <span class="hover:text-indigo-400">(49) 9 9977-0098</span>
+                </a>
+            </div>
+
+            <!-- Voltar ao topo -->
+            <div>
+                <a href="#topo" class="inline-flex items-center gap-2 text-indigo-400 hover:underline transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 15l7-7 7 7" />
+                    </svg>
+                    Voltar ao topo
+                </a>
+            </div>
         </div>
-
-        <!-- Voltar ao topo -->
-        <div>
-          <a href="#topo" class="inline-flex items-center gap-2 text-indigo-400 hover:underline transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 15l7-7 7 7" />
-            </svg>
-            Voltar ao topo
-          </a>
-        </div>
-      </div>
     </footer>
 
     <!-- Scripts -->
     <script>
-      // Script para menu mobile
-      const btn = document.getElementById('menu-btn');
-      const menu = document.getElementById('menu');
-      const links = menu.querySelectorAll('a');
+        // Script para menu mobile
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('menu');
+        const links = menu.querySelectorAll('a');
 
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          // Esconde o menu ao clicar em um link em telas pequenas
-          if (window.innerWidth < 640) {
-             menu.classList.add('hidden');
-          }
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
         });
-      });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Esconde o menu ao clicar em um link em telas pequenas
+                if (window.innerWidth < 640) {
+                    menu.classList.add('hidden');
+                }
+            });
+        });
     </script>
-  </body>
+</body>
+
 </html>
