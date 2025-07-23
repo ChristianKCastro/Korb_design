@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="pt-br" class="dark">
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,240 +12,171 @@
       body {
         font-family: 'Inter', sans-serif;
       }
-      h1, h2, h3, .font-display {
+      h1, h2, h3, h4, .font-display {
         font-family: 'Playfair Display', serif;
       }
     </style>
   </head>
-  <body class="bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white"><!-- Header -->
-<header class="fixed w-full bg-white/90 dark:bg-zinc-900/80 backdrop-blur-md z-50 border-b border-zinc-200 dark:border-zinc-700">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="font-display text-xl font-bold">Christian Korb</h1>
-    <body id="topo" class="bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
+  <body id="topo" class="bg-zinc-900 text-zinc-200">
 
-    <!-- Botão dark mode -->
-    <button id="theme-toggle" class="mr-4 text-zinc-800 dark:text-white" aria-label="Alternar tema">
-      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-11.66l-.71.71M5.05 18.95l-.71.71M21 12h1M2 12H1m3.34-4.66l-.71-.71M18.95 5.05l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" />
-      </svg>
-    </button>
+    <!-- Header -->
+    <header class="fixed w-full bg-zinc-900/80 backdrop-blur-md z-50 border-b border-zinc-700">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="font-display text-xl font-bold text-white">Christian Korb</h1>
 
-    <!-- Botão mobile -->
-    <button id="menu-btn" class="sm:hidden focus:outline-none" aria-label="Abrir menu">
-      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zinc-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+        <!-- Botão mobile -->
+        <button id="menu-btn" class="sm:hidden focus:outline-none" aria-label="Abrir menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
 
-    <!-- Navegação -->
-    <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-6 text-sm absolute sm:static right-6 top-16 bg-white/90 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-700 sm:border-0 rounded-lg p-4 sm:p-0 shadow-lg sm:shadow-none transition-all duration-300 ease-in-out sm:opacity-100 sm:scale-100 z-50 backdrop-blur-md">
-      <a href="#sobre" class="hover:underline">Sobre</a>
-      <a href="#habilidades" class="hover:underline">Habilidades</a>
-      <a href="#projetos" class="hover:underline">Projetos</a>
-      <a href="#contato" class="hover:underline">Contato</a>
-    </nav>
-  </div>
-
-  <!-- Scripts -->
-  <script>
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
-    const links = menu.querySelectorAll('a');
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        if (!menu.classList.contains('sm:flex')) {
-          menu.classList.add('hidden');
-        }
-      });
-    });
-
-    const toggleBtn = document.getElementById('theme-toggle');
-    const icon = document.getElementById('theme-icon');
-    const html = document.documentElement;
-
-    const setTheme = (dark) => {
-      if (dark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    };
-
-    toggleBtn.addEventListener('click', () => {
-      const isDark = html.classList.contains('dark');
-      setTheme(!isDark);
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        setTheme(true);
-      } else {
-        setTheme(false);
-      }
-    });
-  </script>
-</header>
+        <!-- Navegação -->
+        <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-6 text-sm absolute sm:static right-6 top-16 bg-zinc-900/90 sm:bg-transparent border border-zinc-700 sm:border-0 rounded-lg p-4 sm:p-0 shadow-lg sm:shadow-none transition-all duration-300 ease-in-out sm:opacity-100 sm:scale-100 z-50 backdrop-blur-md sm:backdrop-blur-none">
+          <a href="#sobre" class="hover:text-indigo-400 hover:underline">Sobre</a>
+          <a href="#habilidades" class="hover:text-indigo-400 hover:underline">Habilidades</a>
+          <a href="#projetos" class="hover:text-indigo-400 hover:underline">Projetos</a>
+          <a href="#contato" class="hover:text-indigo-400 hover:underline">Contato</a>
+        </nav>
+      </div>
+    </header>
     
     <!-- Hero -->
-<section class="h-screen flex items-center justify-center text-center px-4 bg-zinc-50 pt-24">
-  <div>
-    <h2 class="font-display text-4xl md:text-6xl font-bold mb-4">PORTFÓLIO</h2>
-    <p class="text-lg text-zinc-600">Designer e Desenvolvedor Visual</p>
-  </div>
-</section>
-
-<!-- Sobre -->
-<section id="sobre" class="py-24 px-6 max-w-5xl mx-auto">
-  <h3 class="text-3xl font-display font-bold mb-6">Um Pouco Sobre Mim</h3>
-  <div class="grid md:grid-cols-2 gap-8 items-center">
-    <p>
-      Sou um apaixonado por design visual. Gosto de traduzir emoções e ideias em identidade e conexão. Amo me dedicar com foco e criatividade a soluções visuais que transformam marcas e projetos em experiências memoráveis.
-    </p>
-    <img src="minha-foto.jpg" alt="Christian Korb" class="rounded-xl shadow-md" />
-  </div>
-</section>
-
-<!-- Habilidades -->
-<section id="habilidades" class="py-24 px-6 bg-zinc-100">
-  <div class="max-w-5xl mx-auto">
-    <h3 class="text-3xl font-display font-bold mb-6">Experiência & Habilidades</h3>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside text-zinc-700">
-      <li>Design gráfico</li>
-      <li>Edição de imagem</li>
-      <li>Criação de marcas</li>
-      <li>Desenvolvimento visual</li>
-      <li>Desenvolvimento Web/Apps</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Projetos -->
-<section id="projetos" class="py-24 px-6 max-w-6xl mx-auto">
-  <h3 class="text-3xl font-display font-bold mb-12">Minha Arte</h3>
-  <div class="grid md:grid-cols-3 gap-8">
-  <!-- Projeto 1 -->
- <div class="bg-white dark:bg-zinc-900 rounded-lg shadow-md overflow-hidden">
-  <img
-    src="logo.portfolio.png"
-    alt="Portfolio Digital"
-    class="w-full h-64 object-cover object-center"
-  />
-  <div class="p-4">
-    <h3 class="text-xl font-semibold mb-2">Portfólio Digital</h3>
-    <p class="text-gray-600 dark:text-gray-300">Portfólio digital com projetos visuais que equilibram estética e significado.</p>
-  <a 
-  href="https://christiankcastro.github.io/torredeurza_store/" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="text-blue-600 dark:text-blue-400 hover:underline"
->
-  Ver Projeto
-  </a>
-  </div>
-</div>
-    <!-- Projeto 2 -->
-    <div class="bg-white shadow-md p-6 rounded-xl border border-zinc-200 hover:shadow-lg transition">
-      <img src="underline.logo.png" alt= "Underline Logo" class="rounded-lg shadow-md" />
-      <h4 class="font-semibold text-lg mb-2">Underline - Inovação que Conecta</h4>
-      <p class="text-sm text-zinc-600">Landing page e identidade visual para o site institucional da empresa Underline do ramo de tecnologia.</p>
-      <a
-  href="https://christiankcastro.github.io/underline_landing_page/" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="text-blue-600 dark:text-blue-400 hover:underline"
->
-  Ver Projeto
-  </a>
-    </div>
-    <!-- Projeto 3 -->
-    <div class="bg-white shadow-md p-6 rounded-xl border border-zinc-200 hover:shadow-lg transition">
-      <img src="torredeurza.logo.png" alt= "A Torre de Urza Logo" class="rounded-lg shadow-md" />
-      <h4 class="font-semibold text-lg mb-2">A Torre de Urza</h4>
-      <p class="text-sm text-zinc-600">Logo e identidade de marca para loja especializada em Magic: The Gathering.</p>
-      <a
-  href="https://christiankcastro.github.io/torredeurza_store/" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="text-blue-600 dark:text-blue-400 hover:underline"
->
-  Ver Projeto
-  </a>
-    </div>
-  </div>
-</section>
-
-<!-- Frase de impacto -->
-<section class="py-32 px-6 bg-zinc-900 text-white text-center">
-  <h2 class="text-4xl md:text-5xl font-display italic font-bold">Eu fui <span class="text-indigo-400">criado</span> para criar.</h2>
-</section>
-
-<!-- Outros Projetos -->
-<section class="py-24 px-6 max-w-5xl mx-auto">
-  <h3 class="text-3xl font-display font-bold mb-12">Outros Projetos</h3>
-    <div class="bg-white shadow-md p-6 rounded-xl border border-zinc-200 hover:shadow-lg transition">
-      <img src="datazen.logo.png" alt= "DataZen Logo" class="rounded-lg shadow-md" />
-      <h4 class="font-semibold text-lg mb-2">DataZenIA - Em Desenvolvimento!</h4>
-      <p class="text-sm text-zinc-600">Logo e desenvolvimento de app para estudantes de programação usando IA.</p>
-      <a
-  href="https://github.com/ChristianKCastro/data_tutor_ai" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="text-blue-600 dark:text-blue-400 hover:underline"
->
-  Ver Projeto
-  </a>
-    </div>
-  </div>
-</section>
-<!-- Contato -->
-<footer id="contato" class="py-24 px-6 bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200">
-  <div class="max-w-4xl mx-auto text-center space-y-10">
-    <h3 class="text-3xl font-display font-bold">Trabalhe Comigo</h3>
-
-    <!-- Bloco de contato com moldura -->
-    <div class="flex flex-col md:flex-row justify-center items-center gap-6 flex-wrap">
-
-      <!-- Email -->
-      <div class="flex items-center gap-3 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-zinc-500 dark:text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 12l-4-4-4 4m8 0l-4 4-4-4" />
-        </svg>
-        <a href="mailto:korb.designn@gmail.com" class="underline hover:text-blue-600 dark:hover:text-blue-400">
-          korb.designn@gmail.com
-        </a>
+    <section class="h-screen flex items-center justify-center text-center px-4 bg-zinc-900 pt-24">
+      <div>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-4 text-white">PORTFÓLIO</h2>
+        <p class="text-lg text-zinc-400">Designer e Desenvolvedor Visual</p>
       </div>
+    </section>
 
-      <!-- Telefone -->
-      <div class="flex items-center gap-3 bg-white dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:shadow-md transition">
-       <p class="mb-6">
-  <svg class="inline w-5 h-5 mr-2 text-zinc-800" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M20.52 3.48a12.08 12.08 0 0 0-17.06 0c-4.7 4.7-4.72 12.32-.06 17.06L2 22l1.5-.42a11.9 11.9 0 0 0 4.35.84h.02a12.07 12.07 0 0 0 8.51-3.53 12.08 12.08 0 0 0 0-17.06zM8.24 6.89a.64.64 0 0 1 .63-.16c.19.05 1.37.68 1.58.78.21.11.36.16.51.36.15.2.56.69.56.86s-.09.43-.17.6c-.09.17-.2.38-.29.5-.09.11-.19.23-.12.36s.44.69.94 1.11c.65.58 1.2.77 1.37.86.17.08.28.07.39-.04.11-.11.45-.52.57-.7.12-.18.24-.15.4-.09.17.06 1.11.53 1.3.63.19.1.32.16.36.24.05.08.05.45-.12.88-.17.43-1.01.94-1.39.98-.36.04-.76.06-1.21-.09a7.74 7.74 0 0 1-3.32-2.18A8.08 8.08 0 0 1 7.29 9.1c-.1-.36-.1-.66-.09-.89.02-.23.24-.34.37-.39z"/>
-  </svg>
-  <a href="https://wa.me/554999770008?text=Olá,%20gostaria%20de%20conversar%20sobre%20seus%20serviços." target="_blank" rel="noopener noreferrer" class="underline">
-    (49) 9 9977-0008
-  </a>
-</p>
+    <!-- Sobre -->
+    <section id="sobre" class="py-24 px-6 max-w-5xl mx-auto">
+      <h3 class="text-3xl font-display font-bold mb-8 text-white">Um Pouco Sobre Mim</h3>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <p class="text-zinc-300 leading-relaxed">
+          Sou um apaixonado por design visual. Gosto de traduzir emoções e ideias em identidade e conexão. Amo me dedicar com foco e criatividade a soluções visuais que transformam marcas e projetos em experiências memoráveis.
+        </p>
+        <img src="minha-foto.jpg" alt="Christian Korb" class="rounded-xl shadow-lg shadow-indigo-500/10" onerror="this.onerror=null;this.src='https://placehold.co/600x600/18181b/4f46e5?text=Foto+Indisponível';" />
       </div>
-    </div>
+    </section>
 
-    <!-- Voltar ao topo -->
-    <div>
-      <a href="#topo" class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 15l7-7 7 7" />
-        </svg>
-        Voltar ao topo
-      </a>
-    </div>
-  </div>
-</footer>
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-24 px-6 bg-zinc-800">
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl font-display font-bold mb-8 text-white">Experiência & Habilidades</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-disc list-inside text-zinc-300">
+          <li>Design gráfico</li>
+          <li>Edição de imagem</li>
+          <li>Criação de marcas</li>
+          <li>Desenvolvimento visual</li>
+          <li>Desenvolvimento Web/Apps</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-24 px-6 max-w-6xl mx-auto">
+      <h3 class="text-3xl font-display font-bold mb-12 text-white">Minha Arte</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Projeto 1 -->
+        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+          <img src="logo.portfolio.png" alt="Portfolio Digital" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2 text-white">Portfólio Digital</h4>
+            <p class="text-zinc-400 mb-4">Portfólio digital com projetos visuais que equilibram estética e significado.</p>
+            <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+          </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+          <img src="underline.logo.png" alt="Underline Logo" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2 text-white">Underline</h4>
+            <p class="text-zinc-400 mb-4">Landing page e identidade visual para o site institucional da empresa Underline.</p>
+            <a href="https://christiankcastro.github.io/underline_landing_page/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+          </div>
+        </div>
+        <!-- Projeto 3 -->
+        <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+          <img src="torredeurza.logo.png" alt="A Torre de Urza Logo" class="w-full h-64 object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+          <div class="p-6">
+            <h4 class="text-xl font-semibold mb-2 text-white">A Torre de Urza</h4>
+            <p class="text-zinc-400 mb-4">Logo e identidade de marca para loja especializada em Magic: The Gathering.</p>
+            <a href="https://christiankcastro.github.io/torredeurza_store/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frase de impacto -->
+    <section class="py-32 px-6 bg-zinc-900 text-white text-center">
+      <h2 class="text-4xl md:text-5xl font-display italic font-bold">Eu fui <span class="text-indigo-400">criado</span> para criar.</h2>
+    </section>
+
+    <!-- Projetos em Desenvolvimento -->
+    <section class="py-24 px-6 max-w-6xl mx-auto">
+      <h3 class="text-3xl font-display font-bold mb-12 text-white">Projetos em Desenvolvimento</h3>
+       <div class="bg-zinc-800 rounded-lg shadow-md overflow-hidden border border-zinc-700 hover:border-indigo-400 transition-all duration-300">
+          <img src="datazen.logo.png" alt="DataZen Logo" class="w-full h-full object-cover col-span-1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/18181b/4f46e5?text=Imagem+Indisponível';" />
+            <div class="p-6 col-span-2">
+                <h4 class="text-xl font-semibold mb-2 text-white">DataZen</h4>
+                <p class="text-zinc-400 mb-4">Logo e desenvolvimento de app para estudantes de programação usando IA.</p>
+                <a href="https://github.com/ChristianKCastro/data_tutor_ai" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Ver Projeto</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <footer id="contato" class="py-24 px-6 bg-zinc-800 text-zinc-200">
+      <div class="max-w-4xl mx-auto text-center space-y-10">
+        <h3 class="text-3xl font-display font-bold text-white">Trabalhe Comigo</h3>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6 flex-wrap">
+          <!-- Email -->
+          <a href="mailto:korb.designn@gmail.com" class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span class="hover:text-indigo-400">korb.designn@gmail.com</span>
+          </a>
+
+          <!-- Telefone -->
+          <a href="https://wa.me/554999770098?text=Olá,%20gostaria%20de%20conversar%20sobre%20seus%20serviços." target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 shadow-sm hover:bg-zinc-700 transition-colors">
+            <svg class="w-5 h-5 text-zinc-400" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48a12.08 12.08 0 0 0-17.06 0c-4.7 4.7-4.72 12.32-.06 17.06L2 22l1.5-.42a11.9 11.9 0 0 0 4.35.84h.02a12.07 12.07 0 0 0 8.51-3.53 12.08 12.08 0 0 0 0-17.06zM8.24 6.89a.64.64 0 0 1 .63-.16c.19.05 1.37.68 1.58.78.21.11.36.16.51.36.15.2.56.69.56.86s-.09.43-.17.6c-.09.17-.2.38-.29.5-.09.11-.19.23-.12.36s.44.69.94 1.11c.65.58 1.2.77 1.37.86.17.08.28.07.39-.04.11-.11.45-.52.57-.7.12-.18.24-.15.4-.09.17.06 1.11.53 1.3.63.19.1.32.16.36.24.05.08.05.45-.12.88-.17.43-1.01.94-1.39.98-.36.04-.76.06-1.21-.09a7.74 7.74 0 0 1-3.32-2.18A8.08 8.08 0 0 1 7.29 9.1c-.1-.36-.1-.66-.09-.89.02-.23.24-.34.37-.39z"/></svg>
+            <span class="hover:text-indigo-400">(49) 9 9977-0098</span>
+          </a>
+        </div>
+
+        <!-- Voltar ao topo -->
+        <div>
+          <a href="#topo" class="inline-flex items-center gap-2 text-indigo-400 hover:underline transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 15l7-7 7 7" />
+            </svg>
+            Voltar ao topo
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Script para menu mobile
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('menu');
+      const links = menu.querySelectorAll('a');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          // Esconde o menu ao clicar em um link em telas pequenas
+          if (window.innerWidth < 640) {
+             menu.classList.add('hidden');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
